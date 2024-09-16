@@ -102,7 +102,7 @@
         content: "";
         position: absolute;
         top: 70;
-        right: -64px; // Позиционируем линию справа
+        right: -64px;
         width: 1px;
         height: 186px;
         background-color: #fff;
@@ -112,7 +112,7 @@
       }
 
       &:last-child::after {
-        display: none; // Убираем линию у последнего элемента
+        display: none;
       }
     }
   }
