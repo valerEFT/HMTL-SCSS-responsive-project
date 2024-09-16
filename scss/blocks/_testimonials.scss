@@ -1,0 +1,139 @@
+.testimonials {
+  margin-top: 100px;
+  @include tablet {
+    margin-top: 80px;
+  }
+  @include mobile {
+    margin-top: 60px;
+  }
+  &__header {
+    display: flex;
+    gap: 40px;
+    align-items: center;
+    margin-bottom: 80px;
+
+    @include mobile {
+      margin-bottom: 40px;
+    }
+
+    @include mobile {
+      flex-direction: column;
+      gap: 30px;
+    }
+
+    &-title {
+      line-height: 51px;
+
+      @include mobile {
+        line-height: 46px;
+      }
+    }
+
+    &-subtitle {
+      max-width: 580px;
+      @include fluid-text(18, 16);
+      @include mobile {
+        text-align: center;
+        line-height: 24px;
+      }
+      @include mobile {
+        max-width: 390px;
+      }
+    }
+  }
+  &__list {
+    background-color: var(--color-dark);
+    border-radius: var(--border-radius-large);
+    overflow: hidden;
+  }
+  &__item {
+    max-width: 606px;
+    margin-top: 84px;
+    flex: 0 0 auto;
+    transform: translateX(-52%);
+
+    @include tablet {
+      padding: 40px 40px 35px 40px;
+      min-width: 440px;
+      margin-top: 0px;
+      flex: 0 0 50%;
+    }
+    @include mobile {
+      min-width: 330px;
+      padding: 30px 30px 25px 30px;
+      flex: 0 0 100%;
+      margin-left: 52%;
+    }
+  }
+
+  &__text {
+    color: var(--color-light);
+    padding: 48px 52px 52px 52px;
+    border: 1px solid var(--color-accent);
+    border-radius: var(--border-radius-large);
+    position: relative;
+
+    @include mobile {
+      padding: 30px 30px 25px 30px;
+    }
+
+    &::after {
+      @include square(40px);
+
+      content: "";
+      position: absolute;
+      top: 100%;
+      left: 51px;
+      border: inherit;
+      background-color: var(--color-dark);
+      transform: rotate(45deg);
+      clip-path: polygon(100% 0, 0 100%, 100% 100%);
+      translate: 0 -50%;
+    }
+  }
+  &__title {
+    margin-top: 48px;
+    margin-left: 80px;
+
+    @include mobile {
+      margin-top: 44px;
+      margin-left: 60px;
+    }
+  }
+  &__author {
+    font-size: 20px;
+    color: var(--color-accent);
+    line-height: 25.52px;
+  }
+  &__position {
+    font-size: 18px;
+    line-height: 22.97px;
+    color: var(--color-light);
+  }
+  &__pagination {
+    max-width: 564px;
+    display: flex;
+    justify-content: space-between;
+    margin: auto 0;
+    margin: 124px auto 68px auto;
+
+    @include mobile {
+      margin: 60px 50px 60px 30px;
+    }
+
+    &-dots {
+      display: flex;
+      gap: 19px;
+      &-item {
+        &:first-child {
+          fill: var(--color-accent);
+        }
+      }
+    }
+  }
+}
+.wrapper {
+  display: flex;
+  gap: 50px;
+  overflow-x: auto;
+}

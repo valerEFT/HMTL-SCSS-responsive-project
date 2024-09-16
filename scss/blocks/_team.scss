@@ -1,0 +1,104 @@
+.team {
+  &__header {
+    display: flex;
+    align-items: center;
+    margin-top: 140px;
+    margin-bottom: 40px;
+    gap: 40px;
+
+    @include mobile {
+      display: flex;
+      flex-direction: column;
+      gap: 30px;
+      margin-top: 60px;
+    }
+    &-text {
+      max-width: 473px;
+      @include fluid-text(18, 16);
+      @include mobile {
+        max-width: 390px;
+        text-align: center;
+      }
+    }
+  }
+  &__list {
+    @include desktop {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+  }
+  &__item {
+    border-radius: var(--border-radius-large);
+    border: var(--border);
+    box-shadow: 0px 5px 0px;
+    width: 387px;
+  }
+  &__item-inner {
+    height: 331px;
+    padding: 40px 35px 63px 35px;
+    @include mobile {
+      padding: 40px 50px;
+      height: auto;
+    }
+  }
+  &__inner-upper {
+    margin-top: auto;
+
+    &-title {
+      font-size: 20px;
+      max-width: 195px;
+    }
+    &-subtitle {
+      font-size: 18px;
+      max-width: 195px;
+    }
+  }
+  &__inner-wrapper {
+    display: flex;
+    gap: 20px;
+    position: relative;
+  }
+
+  &__inner-right-image {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  &__inner-lower-text {
+    margin-top: 28px;
+    padding-top: 28px;
+    border-top: var(--border);
+    color: #000000;
+    @include mobile {
+      padding-top: 20px;
+      margin-top: 20px;
+    }
+  }
+
+  &__button {
+    margin-top: 40px;
+    margin-left: auto;
+    width: 269px;
+    padding: 20px 35px;
+    @include flex-center;
+    background-color: var(--color-dark);
+    color: var(--color-light);
+    border-radius: var(--border-radius);
+    border: none;
+    font-size: 20px;
+    line-height: 28px;
+
+    &:hover {
+      background-color: var(--color-accent);
+      color: var(--color-dark);
+    }
+    @include desktop {
+      margin: 0 auto;
+      margin-top: 40px;
+    }
+    @include mobile {
+      width: 390px;
+    }
+  }
+}

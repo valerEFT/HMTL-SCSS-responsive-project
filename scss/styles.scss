@@ -1,0 +1,12 @@
+@import "variables";
+@import "mixins";
+@import "normalize";
+@import "globals";
+@import "media";
+@import "utils";
+
+@import "./blocks/header", "./blocks/burger-menu", "./blocks/hero",
+  "./blocks/hero__partners", "./blocks/services", "./blocks/grid",
+  "./blocks/puddle-bg", "./blocks/services-contact", "./blocks/case-studies",
+  "./blocks/working-process", "./blocks/team", "./blocks/testimonials",
+  "./blocks/contact-us", "./blocks/footer";

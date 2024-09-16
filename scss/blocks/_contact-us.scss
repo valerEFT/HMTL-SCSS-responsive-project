@@ -1,0 +1,160 @@
+.contact-us {
+  margin-top: 140px;
+
+  @include mobile {
+    margin-top: 60px;
+  }
+
+  &__header {
+    display: flex;
+    gap: 40px;
+
+    @include mobile {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 30px;
+    }
+  }
+  &__title {
+    line-height: 51px;
+  }
+  &__subtitle {
+    @include fluid-text(18, 16);
+    max-width: 323px;
+    line-height: 23px;
+
+    @include mobile {
+      text-align: center;
+    }
+  }
+  &__form {
+    margin-top: 80px;
+
+    display: flex;
+    background-color: var(--color-gray);
+    border-radius: var(--border-radius-large);
+    padding: 60px 0px 80px 100px;
+
+    @include tablet {
+      padding: 50px 0px 60px 0px;
+      justify-content: center;
+    }
+
+    @include mobile {
+      margin-top: 40px;
+      padding: 50px 50px 40px 50px;
+      @include flex-center;
+    }
+    @include mobile-s {
+      padding: 40px 30px 40px 30px;
+    }
+
+    &-wrapper {
+      max-width: 556px;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+    }
+  }
+
+  &__radio-wrapper {
+    display: flex;
+    position: relative;
+    gap: 35px;
+  }
+  &__label {
+    white-space: nowrap;
+    cursor: pointer;
+    &--gap {
+      display: flex;
+      gap: 14px;
+    }
+    &-title {
+      margin-bottom: 5px;
+    }
+    &-name {
+      margin-top: 40px;
+    }
+    &-email {
+      margin-top: 25px;
+    }
+    &-message {
+      margin-top: 25px;
+    }
+  }
+
+  &__input {
+    display: flex;
+    flex-direction: column;
+    padding: 18px 0px 18px 30px;
+    border-radius: var(--border-radius);
+    width: 100%;
+    &-message {
+      height: 190px;
+
+      @include tablet {
+        height: 170px;
+      }
+
+      @include mobile {
+        height: 150px;
+      }
+
+      @include mobile-s {
+        height: 132px;
+      }
+    }
+  }
+  &__radio {
+    width: 28px;
+    cursor: pointer;
+  }
+  &__button {
+    border: none;
+    font-size: 20px;
+    &:hover {
+      background-color: var(--color-accent);
+      color: var(--color-dark);
+    }
+    &-mobile-s-above {
+      @include mobile-s {
+        display: none;
+      }
+    }
+    &-mobile-s {
+      @include mobile-s-above {
+        display: none;
+      }
+    }
+    margin-top: 40px;
+
+    @include mobile {
+      margin-top: 60px;
+    }
+    @include mobile-s {
+      margin-top: 50px;
+    }
+
+    background-color: var(--color-dark);
+    color: var(--color-light);
+    width: 100%;
+    padding: 20px 35px;
+    border-radius: var(--border-radius);
+  }
+  &__image-wrapper {
+    position: relative;
+    transform: translateX(47%);
+  }
+  &__image {
+    max-width: 649px;
+    max-height: 648px;
+    @include custom(1048px) {
+      max-width: 620px;
+      max-height: 620px;
+    }
+    @include tablet {
+      display: none;
+    }
+  }
+}

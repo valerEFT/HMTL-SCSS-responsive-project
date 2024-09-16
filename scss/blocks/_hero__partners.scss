@@ -1,0 +1,21 @@
+.hero {
+  &__partners-image {
+    filter: grayscale(1);
+    @include desktop {
+      max-width: 90%;
+    }
+    @include tablet {
+      max-width: 85%;
+    }
+    @include mobile {
+      max-width: 80%;
+    }
+  }
+  &__image-list {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 70px;
+    flex-wrap: wrap;
+    gap: 35px;
+  }
+}

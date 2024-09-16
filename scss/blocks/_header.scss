@@ -1,0 +1,106 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding-top: 60px;
+  @include desktop {
+    padding-top: 40px;
+  }
+
+  @include tablet {
+    padding-top: 25px;
+  }
+
+  @include mobile {
+    padding-top: 15px;
+  }
+
+  &__logo {
+    display: flex;
+    max-width: 219px;
+
+    @include tablet {
+      max-width: 150px;
+    }
+  }
+
+  &__list-button-wrapper {
+    display: flex;
+    gap: 40px;
+    @include desktop {
+      gap: 30px;
+    }
+  }
+  &__menu {
+    @include flex-center;
+
+    &-list {
+      @include flex-center;
+      white-space: nowrap;
+      gap: 40px;
+      @include desktop {
+        gap: 30px;
+      }
+      @include tablet {
+        gap: 15px;
+      }
+    }
+    &-link {
+      font-size: 20px;
+      padding: 20px 0px;
+      position: relative;
+
+      &:hover {
+        &::after {
+          width: 100%;
+        }
+      }
+
+      &::after {
+        content: "";
+        position: absolute;
+        top: 100%;
+        left: 50%;
+        transform: translateX(-50%);
+        background-color: var(--color-dark);
+        width: 0;
+        height: 2px;
+        transition-duration: var(--transition-duration);
+      }
+
+      @include desktop {
+        font-size: 18px;
+      }
+      @include tablet {
+        font-size: 16px;
+      }
+    }
+  }
+
+  &__button {
+    display: block;
+    max-width: 231px;
+    max-height: 68px;
+    border: var(--border);
+    padding: 20px 35px;
+    border-radius: var(--border-radius);
+    font-size: 20px;
+    width: 100%;
+    white-space: nowrap;
+    @include flex-center;
+    &:hover {
+      background-color: var(--color-accent);
+      cursor: pointer;
+    }
+
+    @include desktop {
+      font-size: 18px;
+    }
+    @include tablet {
+      font-size: 16px;
+      max-width: 155px;
+      height: 51px;
+    }
+  }
+}

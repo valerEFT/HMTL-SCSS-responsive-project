@@ -1,0 +1,28 @@
+.puddle-bg {
+  background-color: var(--color-accent);
+  border-radius: var(--border-radius-small);
+  padding: 0 7px;
+  display: inline;
+  max-width: fit-content;
+
+  &-light {
+    background-color: var(--color-light);
+  }
+}
+.accent-bg {
+  background-color: var(--color-accent);
+}
+
+.dark-bg {
+  background-color: var(--color-dark);
+}
+
+.light-bg {
+  background-color: var(--color-light);
+}
+.color-light {
+  color: var(--color-light);
+}
+.color-dark {
+  color: var(--color-dark);
+}

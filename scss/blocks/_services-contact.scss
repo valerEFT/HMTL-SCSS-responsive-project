@@ -1,0 +1,70 @@
+.contact {
+  background-color: var(--color-gray);
+  border-radius: var(--border-radius-large);
+  margin-top: 123px;
+  justify-content: space-between;
+  display: flex;
+  @include mobile {
+    justify-content: center;
+    margin-top: 70px;
+  }
+  &__inner-left {
+    display: flex;
+    flex-direction: column;
+    gap: 26px;
+
+    padding: 60px 0px 60px 60px;
+    @include mobile {
+      padding: 50px 0px;
+      gap: 20px;
+    }
+    max-width: 500px;
+  }
+  &__inner-button {
+    align-self: flex-start;
+    max-width: 288px;
+    width: 100%;
+    font-size: 20px;
+    padding: 20px 35px;
+    background-color: var(--color-dark);
+    color: var(--color-light);
+    border-radius: var(--border-radius);
+    border: none;
+    &:hover {
+      background-color: var(--color-accent);
+      color: var(--color-dark);
+      border: none;
+    }
+
+    @include mobile {
+      align-self: center;
+    }
+  }
+  &__inner-image {
+    margin-right: 130px;
+    max-width: 359px;
+    max-height: 347px;
+
+    @include tablet {
+      max-width: 30%;
+      margin-right: 50px;
+    }
+    @include mobile {
+      display: none;
+    }
+  }
+  &__inner-text {
+    @include fluid-text(18, 16);
+    @include mobile {
+      max-width: 440px;
+    }
+    @include mobile-s {
+      max-width: 290px;
+    }
+  }
+  &__inner-title {
+    @include mobile {
+      margin: 0 auto;
+    }
+  }
+}

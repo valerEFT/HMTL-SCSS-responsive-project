@@ -1,0 +1,119 @@
+.case {
+  &__upper {
+    margin-top: 140px;
+    display: flex;
+    gap: 40px;
+
+    @include mobile {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-top: 60px;
+    }
+    &-title {
+      line-height: 51px;
+      white-space: nowrap;
+    }
+    &-text {
+      max-width: 580px;
+      @include fluid-text(18, 16);
+
+      @include mobile-s {
+        max-width: 390px;
+      }
+    }
+  }
+
+  // lower container ----
+
+  &__lower {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 80px;
+    background-color: var(--color-dark);
+    border-radius: var(--border-radius-large);
+    overflow-x: auto;
+    @include tablet {
+      background-color: var(--color-light);
+      display: flex;
+      gap: 20px;
+    }
+    @include mobile {
+      margin-top: 40px;
+      border-radius: 0;
+    }
+
+    &-button {
+      display: flex;
+      gap: 15px;
+      color: var(--color-accent);
+      &:hover {
+        opacity: 0.7;
+      }
+    }
+    &-text {
+      width: 250px;
+      font-size: 18px;
+      line-height: 22.97px;
+      @include tablet {
+        font-size: 16px;
+        line-height: 24px;
+      }
+    }
+
+    &-item {
+      max-width: 350px;
+      padding-top: 70px;
+      color: var(--color-light);
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      position: relative;
+      @include tablet {
+        width: 350px;
+        background-color: var(--color-dark);
+        box-sizing: border-box;
+        padding: 42px 50px;
+        width: 550px;
+        border-radius: var(--border-radius-large);
+      }
+
+      &:nth-child(1) {
+        margin-left: 60px;
+        margin-bottom: 93px;
+        @include tablet {
+          margin-left: 0px;
+        }
+      }
+      &:nth-child(2) {
+        margin-bottom: 93px;
+      }
+      &:nth-child(3) {
+        margin-right: 60px;
+        margin-bottom: 70px;
+        @include mobile {
+          margin-bottom: 93px;
+        }
+        @include tablet {
+          margin-bottom: 93px;
+        }
+      }
+      &::after {
+        content: "";
+        position: absolute;
+        top: 70;
+        right: -64px; // Позиционируем линию справа
+        width: 1px;
+        height: 186px;
+        background-color: #fff;
+        @include desktop {
+          display: none;
+        }
+      }
+
+      &:last-child::after {
+        display: none; // Убираем линию у последнего элемента
+      }
+    }
+  }
+}
